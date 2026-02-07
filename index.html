@@ -8,13 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&family=Source+Serif+Pro:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --marrom-terroso: #B59A7A;
-            --dourado-fosco: #C5A572;
-            --off-white-bege: #F5F1E8;
-            --marrom-escuro: #7D6B56;
-            --dourado-destaque: #D4AF37;
-            --verde-esperanca: #5A7D5A;
-            --verde-suave: #8AAE8A;
+            --bege-claro: #F9F7F2;
+            --bege-suave: #F2EEE3;
+            --dourado-suave: #D8C9A8;
+            --marrom-claro: #A89576;
+            --marrom-suave: #8B7A5E;
+            --verde-suave: #9BBF9B;
+            --branco-off: #FFFEF9;
+            --verde-pix: #32BCAD;
         }
 
         * {
@@ -25,8 +26,8 @@
 
         body {
             font-family: 'Source Serif Pro', serif;
-            background-color: var(--off-white-bege);
-            color: #333;
+            background-color: var(--branco-off);
+            color: #5A5A5A;
             line-height: 1.6;
         }
 
@@ -39,26 +40,26 @@
 
         /* Header */
         header {
-            background-color: var(--marrom-escuro);
-            color: var(--off-white-bege);
-            padding: 20px 0;
+            background-color: var(--bege-suave);
+            color: var(--marrom-suave);
+            padding: 25px 0;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(168, 149, 118, 0.2);
         }
 
         .logo {
             font-family: 'Cinzel', serif;
             font-size: 2.8rem;
             margin-bottom: 10px;
-            color: var(--dourado-fosco);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: var(--marrom-suave);
+            letter-spacing: 1px;
         }
 
         .tema {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
-            color: var(--dourado-destaque);
+            color: var(--marrom-claro);
             margin-bottom: 15px;
             font-style: italic;
         }
@@ -66,14 +67,15 @@
         .endereco {
             font-size: 1.1rem;
             margin-top: 10px;
-            opacity: 0.9;
+            color: #7A7A7A;
         }
 
         /* Navigation */
         nav {
-            background-color: var(--marrom-terroso);
+            background-color: var(--branco-off);
             padding: 15px 0;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+            border-bottom: 1px solid rgba(168, 149, 118, 0.1);
         }
 
         .nav-container {
@@ -92,40 +94,40 @@
         }
 
         .nav-links a {
-            color: var(--off-white-bege);
+            color: var(--marrom-suave);
             text-decoration: none;
             font-family: 'Playfair Display', serif;
             font-size: 1.1rem;
-            transition: color 0.3s;
+            transition: all 0.3s;
             padding: 5px 10px;
             border-radius: 4px;
         }
 
         .nav-links a:hover {
-            color: var(--dourado-destaque);
-            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--marrom-claro);
+            background-color: rgba(216, 201, 168, 0.1);
         }
 
         .nav-links a.active {
-            color: var(--dourado-destaque);
-            border-bottom: 2px solid var(--dourado-destaque);
+            color: var(--marrom-claro);
+            border-bottom: 2px solid var(--dourado-suave);
         }
 
         .mobile-menu-btn {
             display: none;
             background: none;
             border: none;
-            color: var(--off-white-bege);
+            color: var(--marrom-suave);
             font-size: 1.5rem;
             cursor: pointer;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(125, 107, 86, 0.85), rgba(181, 154, 122, 0.8)), url('https://images.unsplash.com/photo-1518834103221-3c4f5d5a34e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background: linear-gradient(rgba(255, 254, 249, 0.9), rgba(249, 247, 242, 0.8)), url('https://images.unsplash.com/photo-1518834103221-3c4f5d5a34e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
             background-size: cover;
             background-position: center;
-            color: white;
+            color: var(--marrom-suave);
             text-align: center;
             padding: 100px 0;
             margin-bottom: 40px;
@@ -135,13 +137,13 @@
             font-family: 'Playfair Display', serif;
             font-size: 3rem;
             margin-bottom: 25px;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            color: var(--marrom-suave);
         }
 
         .versiculo {
             font-family: 'Cinzel', serif;
             font-size: 2rem;
-            color: var(--dourado-fosco);
+            color: var(--marrom-claro);
             margin-bottom: 20px;
             font-style: italic;
         }
@@ -149,7 +151,7 @@
         .referencia {
             font-size: 1.2rem;
             margin-bottom: 30px;
-            opacity: 0.9;
+            color: #7A7A7A;
         }
 
         .explicacao {
@@ -157,10 +159,12 @@
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.8;
-            background-color: rgba(125, 107, 86, 0.7);
-            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 25px;
             border-radius: 10px;
-            border-left: 5px solid var(--dourado-destaque);
+            border-left: 5px solid var(--dourado-suave);
+            color: var(--marrom-suave);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
         /* Main Content */
@@ -180,73 +184,74 @@
         .sidebar {
             flex: 1;
             min-width: 250px;
-            background-color: white;
+            background-color: var(--bege-claro);
             padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            border-top: 5px solid var(--marrom-terroso);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(168, 149, 118, 0.1);
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
-            color: var(--marrom-escuro);
+            color: var(--marrom-suave);
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid var(--dourado-fosco);
+            border-bottom: 2px solid var(--dourado-suave);
         }
 
         .sobre-texto {
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 25px;
+            color: #666;
         }
 
         .destaque {
-            background-color: var(--off-white-bege);
+            background-color: var(--bege-claro);
             padding: 25px;
             border-radius: 10px;
             margin-bottom: 30px;
-            border-left: 5px solid var(--dourado-fosco);
+            border-left: 5px solid var(--dourado-suave);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
         }
 
         .destaque h3 {
-            color: var(--marrom-escuro);
+            color: var(--marrom-suave);
             margin-bottom: 15px;
             font-family: 'Playfair Display', serif;
         }
 
         /* Doações Section */
         .doacoes-section {
-            background: linear-gradient(to right, rgba(245, 241, 232, 0.9), rgba(245, 241, 232, 0.7)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(to right, var(--bege-claro), var(--bege-suave));
             padding: 60px 0;
             margin: 40px 0;
             border-radius: 10px;
             text-align: center;
+            border: 1px solid rgba(168, 149, 118, 0.1);
         }
 
         .doacoes-content {
             max-width: 800px;
             margin: 0 auto;
             padding: 30px;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: var(--branco-off);
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-top: 5px solid var(--verde-esperanca);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(168, 149, 118, 0.1);
         }
 
         .doacoes-title {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
-            color: var(--marrom-escuro);
+            color: var(--marrom-suave);
             margin-bottom: 20px;
         }
 
         .doacoes-subtitle {
             font-size: 1.2rem;
-            color: #666;
+            color: #777;
             margin-bottom: 30px;
             max-width: 600px;
             margin-left: auto;
@@ -254,35 +259,36 @@
         }
 
         .pix-container {
-            background-color: var(--off-white-bege);
+            background-color: var(--bege-suave);
             padding: 30px;
             border-radius: 10px;
             margin: 30px 0;
-            border: 2px dashed var(--verde-esperanca);
+            border: 2px dashed var(--verde-pix);
             text-align: center;
         }
 
         .pix-icon {
             font-size: 4rem;
-            color: var(--verde-esperanca);
+            color: var(--verde-pix);
             margin-bottom: 20px;
         }
 
         .pix-chave {
-            background-color: white;
+            background-color: var(--branco-off);
             padding: 20px;
             border-radius: 8px;
             border: 1px solid #ddd;
             margin: 20px 0;
             font-size: 1.5rem;
             font-weight: bold;
-            color: var(--marrom-escuro);
+            color: var(--marrom-suave);
             word-break: break-all;
             position: relative;
+            font-family: monospace;
         }
 
         .copiar-pix {
-            background-color: var(--verde-esperanca);
+            background-color: var(--verde-pix);
             color: white;
             border: none;
             padding: 12px 25px;
@@ -295,29 +301,93 @@
         }
 
         .copiar-pix:hover {
-            background-color: var(--verde-suave);
+            background-color: #2BA89A;
         }
 
-        .qr-code {
-            width: 200px;
-            height: 200px;
+        /* QR Code Section */
+        .qrcode-section {
+            background-color: var(--bege-claro);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+            border: 1px solid rgba(168, 149, 118, 0.1);
+        }
+
+        .qrcode-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--marrom-suave);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .qrcode-instructions {
+            color: #777;
+            margin-bottom: 20px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .qrcode-container {
+            width: 250px;
+            height: 250px;
             margin: 20px auto;
             background-color: white;
-            padding: 15px;
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            color: #999;
             border: 1px solid #ddd;
+        }
+
+        .qrcode-placeholder {
+            width: 100%;
+            height: 100%;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            color: #999;
+            font-size: 1rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .qrcode-value {
+            font-family: monospace;
+            background-color: var(--bege-suave);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            word-break: break-all;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .copiar-qrcode {
+            background-color: var(--marrom-claro);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .copiar-qrcode:hover {
+            background-color: var(--marrom-suave);
         }
 
         .versiculo-doacao {
             font-family: 'Cinzel', serif;
             font-size: 1.5rem;
-            color: var(--verde-esperanca);
+            color: var(--marrom-claro);
             margin: 30px 0;
             font-style: italic;
             text-align: center;
@@ -328,9 +398,10 @@
             text-align: center;
             margin-top: 30px;
             padding: 25px;
-            background-color: white;
+            background-color: var(--bege-claro);
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(168, 149, 118, 0.1);
         }
 
         .instagram-icon {
@@ -366,44 +437,46 @@
         }
 
         .evento {
-            background-color: white;
-            padding: 20px;
+            background-color: var(--bege-claro);
+            padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            border-top: 4px solid var(--marrom-terroso);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border-top: 4px solid var(--dourado-suave);
             transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(168, 149, 118, 0.1);
         }
 
         .evento:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
         }
 
         .evento h4 {
-            color: var(--marrom-escuro);
+            color: var(--marrom-suave);
             margin-bottom: 10px;
             font-family: 'Playfair Display', serif;
         }
 
         .evento-data {
-            color: var(--dourado-fosco);
+            color: var(--marrom-claro);
             font-weight: bold;
             margin-bottom: 10px;
         }
 
         /* Footer */
         footer {
-            background-color: var(--marrom-escuro);
-            color: var(--off-white-bege);
+            background-color: var(--bege-suave);
+            color: var(--marrom-suave);
             text-align: center;
             padding: 40px 0;
             margin-top: 60px;
+            border-top: 1px solid rgba(168, 149, 118, 0.2);
         }
 
         .footer-logo {
             font-family: 'Cinzel', serif;
             font-size: 2.2rem;
-            color: var(--dourado-fosco);
+            color: var(--marrom-suave);
             margin-bottom: 20px;
         }
 
@@ -422,7 +495,7 @@
         }
 
         .footer-section h3 {
-            color: var(--dourado-fosco);
+            color: var(--marrom-claro);
             margin-bottom: 15px;
             font-family: 'Playfair Display', serif;
             font-size: 1.3rem;
@@ -437,21 +510,22 @@
         }
 
         .footer-links a {
-            color: var(--off-white-bege);
+            color: var(--marrom-suave);
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .footer-links a:hover {
-            color: var(--dourado-destaque);
+            color: var(--marrom-claro);
         }
 
         .copyright {
             margin-top: 30px;
             opacity: 0.8;
             font-size: 0.9rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(168, 149, 118, 0.1);
             padding-top: 20px;
+            color: #777;
         }
 
         /* Responsive */
@@ -478,11 +552,12 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: var(--marrom-terroso);
+                background-color: var(--branco-off);
                 flex-direction: column;
                 padding: 20px;
                 z-index: 100;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+                border-top: 1px solid rgba(168, 149, 118, 0.1);
             }
             
             .nav-links.active {
@@ -505,6 +580,11 @@
             
             .pix-chave {
                 font-size: 1.2rem;
+            }
+            
+            .qrcode-container {
+                width: 200px;
+                height: 200px;
             }
         }
     </style>
@@ -599,7 +679,7 @@
                     
                     <div class="versiculo-doacao">
                         "Cada um dê conforme determinou em seu coração, não com pesar ou por obrigação, pois Deus ama quem dá com alegria."
-                        <br><span style="font-size: 1rem; color: var(--marrom-escuro);">2 Coríntios 9:7</span>
+                        <br><span style="font-size: 1rem; color: var(--marrom-claro);">2 Coríntios 9:7</span>
                     </div>
                     
                     <div class="pix-container">
@@ -617,29 +697,56 @@
                             <i class="fas fa-copy"></i> Copiar Chave PIX
                         </button>
                         
-                        <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">
+                        <p style="margin-top: 15px; color: #777; font-size: 0.9rem;">
                             Após copiar, abra seu aplicativo bancário e cole a chave para realizar a transferência.
                         </p>
-                        
-                        <div class="qr-code">
-                            <div style="text-align: center;">
-                                <div style="font-size: 3rem; color: var(--verde-esperanca); margin-bottom: 10px;">
-                                    <i class="fas fa-qrcode"></i>
-                                </div>
-                                <p>Scan QR Code</p>
-                                <p style="font-size: 0.8rem; margin-top: 5px;">(Disponível em breve)</p>
-                            </div>
-                        </div>
                     </div>
                     
-                    <div style="margin-top: 30px; padding: 20px; background-color: rgba(197, 165, 114, 0.1); border-radius: 8px;">
-                        <h3 style="color: var(--marrom-escuro); margin-bottom: 15px;">Como sua doação será utilizada?</h3>
-                        <ul style="text-align: left; padding-left: 20px;">
-                            <li>Organização de eventos e retiros espirituais</li>
-                            <li>Material didático para estudos bíblicos</li>
-                            <li>Equipamentos para louvor e apresentações</li>
-                            <li>Lanches e refeições nos encontros</li>
-                            <li>Transporte para atividades externas</li>
+                    <!-- QR Code Section -->
+                    <div class="qrcode-section">
+                        <h3 class="qrcode-title">Use o QR Code do PIX</h3>
+                        <p class="qrcode-instructions">
+                            Abra o app em que vai fazer a transferência, escaneie a imagem ou cole o código do QR Code
+                        </p>
+                        
+                        <div class="qrcode-container">
+                            <!-- Aqui você deve substituir o placeholder pelo seu QR Code -->
+                            <!-- Para usar seu QR Code, substitua a div abaixo por: -->
+                            <!-- <img src="qrcoderai.jpeg" alt="QR Code PIX Grupo Emanuel" style="width: 100%; height: 100%; object-fit: contain;"> -->
+                            <div class="qrcode-placeholder">
+                                <div>
+                                    <div style="font-size: 3rem; color: #ccc; margin-bottom: 10px;">
+                                        <i class="fas fa-qrcode"></i>
+                                    </div>
+                                    <p>QR Code PIX</p>
+                                    <p style="font-size: 0.8rem; margin-top: 5px;">Substitua pelo arquivo qrcoderi2.jpeg</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p style="margin: 15px 0; font-weight: bold; color: var(--marrom-suave);">R$ 0,00</p>
+                        
+                        <div class="qrcode-value" id="qrcodeValue">
+                            00020126580014BR.GOV.BCB.PIX0136123e4567-e89b-12d3-a456-4266141740005204000053039865802BR5913GRUPO EMANUEL6008CURITIBA62070503***6304E2CA
+                        </div>
+                        
+                        <button class="copiar-qrcode" id="copiarQrcodeBtn">
+                            <i class="fas fa-copy"></i> COPIAR CÓDIGO DO QR CODE
+                        </button>
+                        
+                        <p style="margin-top: 15px; color: #777; font-size: 0.9rem;">
+                            <i class="fas fa-info-circle"></i> Escaneie o QR Code com seu app bancário para fazer a doação.
+                        </p>
+                    </div>
+                    
+                    <div style="margin-top: 30px; padding: 20px; background-color: rgba(216, 201, 168, 0.1); border-radius: 8px;">
+                        <h3 style="color: var(--marrom-suave); margin-bottom: 15px;">Como sua doação será utilizada?</h3>
+                        <ul style="text-align: left; padding-left: 20px; color: #666;">
+                            <li><i class="fas fa-check" style="color: var(--verde-suave); margin-right: 8px;"></i> Organização de eventos e retiros espirituais</li>
+                            <li><i class="fas fa-check" style="color: var(--verde-suave); margin-right: 8px;"></i> Material didático para estudos bíblicos</li>
+                            <li><i class="fas fa-check" style="color: var(--verde-suave); margin-right: 8px;"></i> Equipamentos para louvor e apresentações</li>
+                            <li><i class="fas fa-check" style="color: var(--verde-suave); margin-right: 8px;"></i> Lanches e refeições nos encontros</li>
+                            <li><i class="fas fa-check" style="color: var(--verde-suave); margin-right: 8px;"></i> Transporte para atividades externas</li>
                         </ul>
                     </div>
                 </div>
@@ -648,40 +755,40 @@
         
         <aside class="sidebar">
             <h2 class="section-title">Conecte-se</h2>
-            <p>Siga-nos no Instagram para ficar por dentro de todas as novidades, eventos e mensagens do Grupo Emanuel.</p>
+            <p style="color: #666;">Siga-nos no Instagram para ficar por dentro de todas as novidades, eventos e mensagens do Grupo Emanuel.</p>
             
             <div class="instagram-container">
                 <div class="instagram-icon">
                     <i class="fab fa-instagram"></i>
                 </div>
                 <h3>Siga-nos no Instagram</h3>
-                <p>Fique atualizado com nossos eventos e atividades</p>
+                <p style="color: #777;">Fique atualizado com nossos eventos e atividades</p>
                 
                 <a href="https://www.instagram.com/grupo_.emanuel?igsh=MTl4eW14ZWxmNWRqZg==" target="_blank" class="instagram-link">
                     <i class="fab fa-instagram"></i> @grupo_.emanuel
                 </a>
                 
-                <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #777;">
                     Clique no link acima para visitar nosso perfil
                 </p>
             </div>
             
             <div style="margin-top: 30px;">
-                <h3 style="color: var(--marrom-escuro); margin-bottom: 15px;">Horários de Reunião</h3>
-                <ul style="list-style-type: none;">
-                    <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                <h3 style="color: var(--marrom-suave); margin-bottom: 15px;">Horários de Reunião</h3>
+                <ul style="list-style-type: none; color: #666;">
+                    <li style="padding: 8px 0; border-bottom: 1px dashed rgba(168, 149, 118, 0.2);">
                         <strong>Segunda:</strong> 20h00 (Oração)
                     </li>
-                    <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                    <li style="padding: 8px 0; border-bottom: 1px dashed rgba(168, 149, 118, 0.2);">
                         <strong>Quarta:</strong> 20h00 (Culto de Oração)
                     </li>
-                     <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                    <li style="padding: 8px 0; border-bottom: 1px dashed rgba(168, 149, 118, 0.2);">
                         <strong>Sexta:</strong> 19h30 (Culto de ensino)
                     </li>
-                     <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                    <li style="padding: 8px 0; border-bottom: 1px dashed rgba(168, 149, 118, 0.2);">
                         <strong>Sábado:</strong> 19h30 (Culto)
                     </li>
-                    <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                    <li style="padding: 8px 0; border-bottom: 1px dashed rgba(168, 149, 118, 0.2);">
                         <strong>Domingo:</strong> 09h00 (Escola bíblica dominical)
                     </li>
                     <li style="padding: 8px 0;">
@@ -690,12 +797,12 @@
                 </ul>
             </div>
             
-            <div style="margin-top: 30px; padding: 20px; background-color: rgba(181, 154, 122, 0.1); border-radius: 8px;">
-                <h3 style="color: var(--marrom-escuro); margin-bottom: 15px;">Ofertas e Dízimos</h3>
-                <p>Além das doações via PIX, você também pode contribuir pessoalmente durante nossos cultos e reuniões.</p>
-                <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+            <div style="margin-top: 30px; padding: 20px; background-color: rgba(216, 201, 168, 0.1); border-radius: 8px;">
+                <h3 style="color: var(--marrom-suave); margin-bottom: 15px;">Ofertas e Dízimos</h3>
+                <p style="color: #666;">Além das doações via PIX, você também pode contribuir pessoalmente durante nossos cultos e reuniões.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: #777; font-style: italic;">
                     "Honre ao Senhor com todos os seus recursos e com os primeiros frutos de todas as suas plantações."
-                    <br><span style="font-style: italic;">Provérbios 3:9</span>
+                    <br><span>Provérbios 3:9</span>
                 </p>
             </div>
         </aside>
@@ -825,7 +932,7 @@
                     // Feedback visual
                     const originalText = copiarPixBtn.innerHTML;
                     copiarPixBtn.innerHTML = '<i class="fas fa-check"></i> Chave Copiada!';
-                    copiarPixBtn.style.backgroundColor = '#5A7D5A';
+                    copiarPixBtn.style.backgroundColor = '#2BA89A';
                     
                     setTimeout(() => {
                         copiarPixBtn.innerHTML = originalText;
@@ -833,8 +940,8 @@
                     }, 2000);
                     
                     // Efeito visual na chave
-                    pixChave.style.backgroundColor = 'rgba(90, 125, 90, 0.1)';
-                    pixChave.style.borderColor = '#5A7D5A';
+                    pixChave.style.backgroundColor = 'rgba(50, 188, 173, 0.1)';
+                    pixChave.style.borderColor = '#32BCAD';
                     
                     setTimeout(() => {
                         pixChave.style.backgroundColor = '';
@@ -852,12 +959,39 @@
                     // Feedback visual
                     const originalText = copiarPixBtn.innerHTML;
                     copiarPixBtn.innerHTML = '<i class="fas fa-check"></i> Chave Copiada!';
-                    copiarPixBtn.style.backgroundColor = '#5A7D5A';
+                    copiarPixBtn.style.backgroundColor = '#2BA89A';
                     
                     setTimeout(() => {
                         copiarPixBtn.innerHTML = originalText;
                         copiarPixBtn.style.backgroundColor = '';
                     }, 2000);
+                });
+            });
+            
+            // Funcionalidade para copiar código QR Code
+            const copiarQrcodeBtn = document.getElementById('copiarQrcodeBtn');
+            const qrcodeValue = document.getElementById('qrcodeValue');
+            
+            copiarQrcodeBtn.addEventListener('click', function() {
+                const codigo = qrcodeValue.textContent;
+                
+                navigator.clipboard.writeText(codigo).then(() => {
+                    // Feedback visual
+                    const originalText = copiarQrcodeBtn.innerHTML;
+                    copiarQrcodeBtn.innerHTML = '<i class="fas fa-check"></i> Código Copiado!';
+                    copiarQrcodeBtn.style.backgroundColor = '#8B7A5E';
+                    
+                    setTimeout(() => {
+                        copiarQrcodeBtn.innerHTML = originalText;
+                        copiarQrcodeBtn.style.backgroundColor = '';
+                    }, 2000);
+                    
+                    // Efeito visual no código
+                    qrcodeValue.style.backgroundColor = 'rgba(139, 122, 94, 0.1)';
+                    
+                    setTimeout(() => {
+                        qrcodeValue.style.backgroundColor = '';
+                    }, 1000);
                 });
             });
             
@@ -912,6 +1046,11 @@
                     });
                 }
             });
+            
+            // Instruções para substituir o QR Code
+            console.log("Para usar seu QR Code (qrcoderi2.jpeg):");
+            console.log("1. Substitua a div com class='qrcode-placeholder'");
+            console.log("2. Coloque: <img src='qrcoderi2.jpeg' alt='QR Code PIX' style='width: 100%; height: 100%; object-fit: contain;'>");
         });
     </script>
 </body>
