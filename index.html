@@ -13,6 +13,8 @@
             --off-white-bege: #F5F1E8;
             --marrom-escuro: #7D6B56;
             --dourado-destaque: #D4AF37;
+            --verde-esperanca: #5A7D5A;
+            --verde-suave: #8AAE8A;
         }
 
         * {
@@ -42,6 +44,7 @@
             padding: 20px 0;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
         .logo {
@@ -64,6 +67,57 @@
             font-size: 1.1rem;
             margin-top: 10px;
             opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--marrom-terroso);
+            padding: 15px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            color: var(--off-white-bege);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            color: var(--dourado-destaque);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-links a.active {
+            color: var(--dourado-destaque);
+            border-bottom: 2px solid var(--dourado-destaque);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--off-white-bege);
+            font-size: 1.5rem;
+            cursor: pointer;
         }
 
         /* Hero Section */
@@ -162,6 +216,113 @@
             font-family: 'Playfair Display', serif;
         }
 
+        /* Doações Section */
+        .doacoes-section {
+            background: linear-gradient(to right, rgba(245, 241, 232, 0.9), rgba(245, 241, 232, 0.7)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 0;
+            margin: 40px 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .doacoes-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid var(--verde-esperanca);
+        }
+
+        .doacoes-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--marrom-escuro);
+            margin-bottom: 20px;
+        }
+
+        .doacoes-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pix-container {
+            background-color: var(--off-white-bege);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 2px dashed var(--verde-esperanca);
+            text-align: center;
+        }
+
+        .pix-icon {
+            font-size: 4rem;
+            color: var(--verde-esperanca);
+            margin-bottom: 20px;
+        }
+
+        .pix-chave {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--marrom-escuro);
+            word-break: break-all;
+            position: relative;
+        }
+
+        .copiar-pix {
+            background-color: var(--verde-esperanca);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .copiar-pix:hover {
+            background-color: var(--verde-suave);
+        }
+
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #999;
+            border: 1px solid #ddd;
+        }
+
+        .versiculo-doacao {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--verde-esperanca);
+            margin: 30px 0;
+            font-style: italic;
+            text-align: center;
+        }
+
         /* Instagram Section */
         .instagram-container {
             text-align: center;
@@ -210,6 +371,12 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             border-top: 4px solid var(--marrom-terroso);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .evento:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .evento h4 {
@@ -240,10 +407,51 @@
             margin-bottom: 20px;
         }
 
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            color: var(--dourado-fosco);
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--off-white-bege);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--dourado-destaque);
+        }
+
         .copyright {
-            margin-top: 20px;
+            margin-top: 30px;
             opacity: 0.8;
             font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
         }
 
         /* Responsive */
@@ -263,6 +471,41 @@
             .logo {
                 font-size: 2.2rem;
             }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--marrom-terroso);
+                flex-direction: column;
+                padding: 20px;
+                z-index: 100;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .doacoes-title {
+                font-size: 2rem;
+            }
+            
+            .pix-chave {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -275,6 +518,22 @@
             <p class="endereco">Rua Nossa Senhora do Perpétuo Socorro, 322 - Assembleia de Deus Gralha Azul</p>
         </div>
     </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#doacoes">Doações</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -290,7 +549,7 @@
     <!-- Main Content -->
     <div class="container content">
         <main class="main-content">
-            <section class="sobre">
+            <section class="sobre" id="sobre">
                 <h2 class="section-title">Sobre o Grupo Emanuel</h2>
                 <p class="sobre-texto">
                     O Grupo Emanuel é o ministério de adolescentes da Assembleia de Deus em Gralha Azul. 
@@ -308,7 +567,7 @@
                 </div>
             </section>
             
-            <section class="eventos-section">
+            <section class="eventos-section" id="eventos">
                 <h2 class="section-title">Próximos Eventos</h2>
                 <div class="eventos">
                     <div class="evento">
@@ -325,6 +584,63 @@
                         <h4>Encontro de Jovens</h4>
                         <p class="evento-data">Último Domingo do mês • 18h</p>
                         <p>Encontro especial com temas relevantes para a juventude cristã.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Seção de Doações -->
+            <section class="doacoes-section" id="doacoes">
+                <div class="doacoes-content">
+                    <h2 class="doacoes-title">Apoie o Ministério</h2>
+                    <p class="doacoes-subtitle">
+                        Sua contribuição ajuda a manter nossas atividades, eventos e a propagar a Palavra de Deus aos adolescentes. 
+                        Cada doação é uma semente que gera frutos no Reino.
+                    </p>
+                    
+                    <div class="versiculo-doacao">
+                        "Cada um dê conforme determinou em seu coração, não com pesar ou por obrigação, pois Deus ama quem dá com alegria."
+                        <br><span style="font-size: 1rem; color: var(--marrom-escuro);">2 Coríntios 9:7</span>
+                    </div>
+                    
+                    <div class="pix-container">
+                        <div class="pix-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3>Faça uma doação via PIX</h3>
+                        <p>Utilize a chave PIX abaixo para contribuir com o ministério do Grupo Emanuel:</p>
+                        
+                        <div class="pix-chave" id="pixChave">
+                            grupo.emanuel26@gmail.com
+                        </div>
+                        
+                        <button class="copiar-pix" id="copiarPixBtn">
+                            <i class="fas fa-copy"></i> Copiar Chave PIX
+                        </button>
+                        
+                        <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">
+                            Após copiar, abra seu aplicativo bancário e cole a chave para realizar a transferência.
+                        </p>
+                        
+                        <div class="qr-code">
+                            <div style="text-align: center;">
+                                <div style="font-size: 3rem; color: var(--verde-esperanca); margin-bottom: 10px;">
+                                    <i class="fas fa-qrcode"></i>
+                                </div>
+                                <p>Scan QR Code</p>
+                                <p style="font-size: 0.8rem; margin-top: 5px;">(Disponível em breve)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px; padding: 20px; background-color: rgba(197, 165, 114, 0.1); border-radius: 8px;">
+                        <h3 style="color: var(--marrom-escuro); margin-bottom: 15px;">Como sua doação será utilizada?</h3>
+                        <ul style="text-align: left; padding-left: 20px;">
+                            <li>Organização de eventos e retiros espirituais</li>
+                            <li>Material didático para estudos bíblicos</li>
+                            <li>Equipamentos para louvor e apresentações</li>
+                            <li>Lanches e refeições nos encontros</li>
+                            <li>Transporte para atividades externas</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -363,39 +679,80 @@
                         <strong>Sexta:</strong> 19h30 (Culto de ensino)
                     </li>
                      <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
-                        <strong>Sabádo:</strong> 19h30 (Culto)
+                        <strong>Sábado:</strong> 19h30 (Culto)
                     </li>
                     <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
                         <strong>Domingo:</strong> 09h00 (Escola bíblica dominical)
-                         <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                    </li>
+                    <li style="padding: 8px 0;">
                         <strong>Domingo:</strong> 19h00 (Culto)
                     </li>
-                    </li>
                 </ul>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background-color: rgba(181, 154, 122, 0.1); border-radius: 8px;">
+                <h3 style="color: var(--marrom-escuro); margin-bottom: 15px;">Ofertas e Dízimos</h3>
+                <p>Além das doações via PIX, você também pode contribuir pessoalmente durante nossos cultos e reuniões.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                    "Honre ao Senhor com todos os seus recursos e com os primeiros frutos de todas as suas plantações."
+                    <br><span style="font-style: italic;">Provérbios 3:9</span>
+                </p>
             </div>
         </aside>
     </div>
 
     <!-- Footer -->
-    <footer>
+    <footer id="contato">
         <div class="container">
             <div class="footer-logo">GRUPO EMANUEL</div>
             <p>Do Templo Flui a Vida</p>
             <p>Rua Nossa Senhora do Perpétuo Socorro, 322 - Assembleia de Deus Gralha Azul</p>
             
-            <div style="margin-top: 20px;">
-                <a href="https://www.instagram.com/grupo_.emanuel?igsh=MTl4eW14ZWxmNWRqZg==" target="_blank" style="color: var(--dourado-fosco); font-size: 1.2rem;">
-                    <i class="fab fa-instagram"></i> @grupo_.emanuel
-                </a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Rua Nossa Senhora do Perpétuo Socorro, 322</li>
+                        <li><i class="fas fa-church"></i> Assembleia de Deus Gralha Azul</li>
+                        <li><i class="fas fa-clock"></i> Cultos: Sábados 19h30</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Redes Sociais</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="https://www.instagram.com/grupo_.emanuel?igsh=MTl4eW14ZWxmNWRqZg==" target="_blank">
+                                <i class="fab fa-instagram"></i> @grupo_.emanuel
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#doacoes">
+                                <i class="fas fa-hand-holding-heart"></i> Faça uma doação
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#sobre">Sobre o Grupo</a></li>
+                        <li><a href="#eventos">Eventos</a></li>
+                        <li><a href="#doacoes">Doações</a></li>
+                    </ul>
+                </div>
             </div>
             
-            <p class="copyright">&copy; 2023 Grupo Emanuel - Todos os direitos reservados</p>
+            <div class="copyright">
+                &copy; <span id="currentYear"></span> Grupo Emanuel - Todos os direitos reservados
+            </div>
         </div>
     </footer>
 
     <script>
-        // Efeito de digitação para o versículo
         document.addEventListener('DOMContentLoaded', function() {
+            // Efeito de digitação para o versículo
             const versiculo = document.querySelector('.versiculo');
             const textoOriginal = versiculo.textContent;
             versiculo.textContent = '';
@@ -427,7 +784,134 @@
             
             // Atualização dinâmica do ano no copyright
             const anoAtual = new Date().getFullYear();
-            document.querySelector('.copyright').textContent = `© ${anoAtual} Grupo Emanuel - Todos os direitos reservados`;
+            document.getElementById('currentYear').textContent = anoAtual;
+            
+            // Menu mobile
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // Fechar menu ao clicar em um link
+            const navItems = document.querySelectorAll('.nav-links a');
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+            
+            // Funcionalidade para copiar chave PIX
+            const copiarPixBtn = document.getElementById('copiarPixBtn');
+            const pixChave = document.getElementById('pixChave');
+            
+            copiarPixBtn.addEventListener('click', function() {
+                const chave = pixChave.textContent;
+                
+                // Usando a API Clipboard
+                navigator.clipboard.writeText(chave).then(() => {
+                    // Feedback visual
+                    const originalText = copiarPixBtn.innerHTML;
+                    copiarPixBtn.innerHTML = '<i class="fas fa-check"></i> Chave Copiada!';
+                    copiarPixBtn.style.backgroundColor = '#5A7D5A';
+                    
+                    setTimeout(() => {
+                        copiarPixBtn.innerHTML = originalText;
+                        copiarPixBtn.style.backgroundColor = '';
+                    }, 2000);
+                    
+                    // Efeito visual na chave
+                    pixChave.style.backgroundColor = 'rgba(90, 125, 90, 0.1)';
+                    pixChave.style.borderColor = '#5A7D5A';
+                    
+                    setTimeout(() => {
+                        pixChave.style.backgroundColor = '';
+                        pixChave.style.borderColor = '#ddd';
+                    }, 1000);
+                }).catch(err => {
+                    // Fallback para navegadores mais antigos
+                    const textArea = document.createElement('textarea');
+                    textArea.value = chave;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    
+                    // Feedback visual
+                    const originalText = copiarPixBtn.innerHTML;
+                    copiarPixBtn.innerHTML = '<i class="fas fa-check"></i> Chave Copiada!';
+                    copiarPixBtn.style.backgroundColor = '#5A7D5A';
+                    
+                    setTimeout(() => {
+                        copiarPixBtn.innerHTML = originalText;
+                        copiarPixBtn.style.backgroundColor = '';
+                    }, 2000);
+                });
+            });
+            
+            // Rolagem suave para âncoras
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') return;
+                    
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Destacar seção ativa no menu durante rolagem
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section[id], div[id]');
+                const navLinks = document.querySelectorAll('.nav-links a');
+                
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                // Se estiver no topo, ativar o link "Início"
+                if (pageYOffset < 100) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#') {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
         });
     </script>
 </body>
