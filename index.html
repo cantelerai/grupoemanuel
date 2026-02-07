@@ -3,85 +3,432 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo Emanuel</title>
+    <title>Grupo Emanuel - Do Templo Flui a Vida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&family=Source+Serif+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --marrom-terroso: #B59A7A;
+            --dourado-fosco: #C5A572;
+            --off-white-bege: #F5F1E8;
+            --marrom-escuro: #7D6B56;
+            --dourado-destaque: #D4AF37;
+        }
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Fonte Google (opcional) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        body {
+            font-family: 'Source Serif Pro', serif;
+            background-color: var(--off-white-bege);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--marrom-escuro);
+            color: var(--off-white-bege);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: var(--dourado-fosco);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .tema {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--dourado-destaque);
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .endereco {
+            font-size: 1.1rem;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(125, 107, 86, 0.85), rgba(181, 154, 122, 0.8)), url('https://images.unsplash.com/photo-1518834103221-3c4f5d5a34e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            margin-bottom: 40px;
+        }
+
+        .hero-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .versiculo {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--dourado-fosco);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .referencia {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .explicacao {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            background-color: rgba(125, 107, 86, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid var(--dourado-destaque);
+        }
+
+        /* Main Content */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            gap: 30px;
+        }
+
+        .main-content {
+            flex: 3;
+            min-width: 300px;
+        }
+
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--marrom-terroso);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--marrom-escuro);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--dourado-fosco);
+        }
+
+        .sobre-texto {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .destaque {
+            background-color: var(--off-white-bege);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--dourado-fosco);
+        }
+
+        .destaque h3 {
+            color: var(--marrom-escuro);
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Instagram Section */
+        .instagram-container {
+            text-align: center;
+            margin-top: 30px;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .instagram-icon {
+            font-size: 3rem;
+            color: #E4405F;
+            margin-bottom: 15px;
+        }
+
+        .instagram-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .instagram-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Events Section */
+        .eventos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .evento {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--marrom-terroso);
+        }
+
+        .evento h4 {
+            color: var(--marrom-escuro);
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .evento-data {
+            color: var(--dourado-fosco);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--marrom-escuro);
+            color: var(--off-white-bege);
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--dourado-fosco);
+            margin-bottom: 20px;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .hero-content h2 {
+                font-size: 2.2rem;
+            }
+            
+            .versiculo {
+                font-size: 1.6rem;
+            }
+            
+            .logo {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <!-- Cabeçalho -->
+    <!-- Header -->
     <header>
-        <h1>Grupo Emanuel</h1>
-        <p>Assembleia de Deus – Gralha Azul</p>
+        <div class="container">
+            <h1 class="logo">GRUPO EMANUEL</h1>
+            <p class="tema">DO TEMPLO FLUI A VIDA</p>
+            <p class="endereco">Rua Nossa Senhora do Perpétuo Socorro, 322 - Assembleia de Deus Gralha Azul</p>
+        </div>
     </header>
 
-    <!-- Menu -->
-    <nav>
-        <ul>
-            <li><a href="#sobre">Quem Somos</a></li>
-            <li><a href="#agenda">Agenda</a></li>
-            <li><a href="#devocional">Devocional</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>Ossa arida, audite verbum Domini</h2>
+            <p class="referencia">Ezequiel 37:4</p>
+            <div class="explicacao">
+                <p>"Mesmo onde era seco,<br>quando a Palavra é liberada,<br>a vida começa a fluir."</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- Conteúdo principal -->
-    <main>
+    <!-- Main Content -->
+    <div class="container content">
+        <main class="main-content">
+            <section class="sobre">
+                <h2 class="section-title">Sobre o Grupo Emanuel</h2>
+                <p class="sobre-texto">
+                    O Grupo Emanuel é o ministério de adolescentes da Assembleia de Deus em Gralha Azul. 
+                    Nosso propósito é guiar os jovens em uma jornada de fé, comunhão e crescimento espiritual, 
+                    baseados na Palavra de Deus que dá vida até mesmo aos lugares mais secos.
+                </p>
+                
+                <div class="destaque">
+                    <h3>Nosso Propósito</h3>
+                    <p>
+                        Assim como o profeta Ezequiel profetizou sobre os ossos secos e estes recuperaram a vida, 
+                        acreditamos que a Palavra de Deus tem poder para transformar e dar vida nova aos corações dos adolescentes. 
+                        No Grupo Emanuel, buscamos ser instrumentos deste fluir de vida que vem do Templo, que é a presença de Deus.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="eventos-section">
+                <h2 class="section-title">Próximos Eventos</h2>
+                <div class="eventos">
+                    <div class="evento">
+                        <h4>Culto de Adolescentes</h4>
+                        <p class="evento-data">Todo Sábado • 19h30</p>
+                        <p>Encontro semanal com louvor, palavra e comunhão especialmente voltado para adolescentes.</p>
+                    </div>
+                    <div class="evento">
+                        <h4>Estudo Bíblico</h4>
+                        <p class="evento-data">Quarta-feira • 20h</p>
+                        <p>Estudo aprofundado da Palavra de Deus para crescimento e fundamentação na fé.</p>
+                    </div>
+                    <div class="evento">
+                        <h4>Encontro de Jovens</h4>
+                        <p class="evento-data">Último Domingo do mês • 18h</p>
+                        <p>Encontro especial com temas relevantes para a juventude cristã.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <aside class="sidebar">
+            <h2 class="section-title">Conecte-se</h2>
+            <p>Siga-nos no Instagram para ficar por dentro de todas as novidades, eventos e mensagens do Grupo Emanuel.</p>
+            
+            <div class="instagram-container">
+                <div class="instagram-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <h3>Siga-nos no Instagram</h3>
+                <p>Fique atualizado com nossos eventos e atividades</p>
+                
+                <a href="https://www.instagram.com/grupo_.emanuel?igsh=MTl4eW14ZWxmNWRqZg==" target="_blank" class="instagram-link">
+                    <i class="fab fa-instagram"></i> @grupo_.emanuel
+                </a>
+                
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                    Clique no link acima para visitar nosso perfil
+                </p>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <h3 style="color: var(--marrom-escuro); margin-bottom: 15px;">Horários de Reunião</h3>
+                <ul style="list-style-type: none;">
+                    <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                        <strong>Segunda:</strong> 20h00 (Oração)
+                    </li>
+                    <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                        <strong>Quarta:</strong> 20h00 (Culto de Oração)
+                    </li>
+                     <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                        <strong>Sexta:</strong> 19h30 (Culto de ensino)
+                    </li>
+                     <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                        <strong>Sabádo:</strong> 19h30 (Culto)
+                    </li>
+                    <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                        <strong>Domingo:</strong> 09h00 (Escola bíblica dominical)
+                         <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                        <strong>Domingo:</strong> 19h00 (Culto)
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
 
-        <!-- Sobre -->
-        <section id="sobre">
-            <h2>Quem Somos</h2>
-            <p>
-                O <strong>Grupo Emanuel</strong> é o grupo de adolescentes da 
-                Assembleia de Deus – Gralha Azul.
-            </p>
-            <p>
-                Um lugar para crescer na fé, construir amizades e viver o amor de Deus.
-            </p>
-        </section>
-
-        <!-- Agenda -->
-        <section id="agenda">
-            <h2>Agenda</h2>
-            <ul>
-                <li>📅 Encontro semanal – (definir dia e horário)</li>
-                <li>📖 Culto de adolescentes</li>
-                <li>⛺ Eventos e retiros</li>
-            </ul>
-        </section>
-
-        <!-- Devocional -->
-        <section id="devocional">
-            <h2>Devocional da Semana</h2>
-            <p>
-                “Eis que a virgem conceberá e dará à luz um filho,
-                e ele será chamado Emanuel, que traduzido é: Deus conosco.”
-            </p>
-            <span>Mateus 1:23</span>
-        </section>
-
-        <!-- Contato -->
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>
-                📍 Rua Nossa Senhora do Perpétuo Socorro, 322<br>
-                Assembleia de Deus – Gralha Azul
-            </p>
-        </section>
-
-    </main>
-
-    <!-- Rodapé -->
+    <!-- Footer -->
     <footer>
-        <p>© 2026 • Grupo Emanuel</p>
+        <div class="container">
+            <div class="footer-logo">GRUPO EMANUEL</div>
+            <p>Do Templo Flui a Vida</p>
+            <p>Rua Nossa Senhora do Perpétuo Socorro, 322 - Assembleia de Deus Gralha Azul</p>
+            
+            <div style="margin-top: 20px;">
+                <a href="https://www.instagram.com/grupo_.emanuel?igsh=MTl4eW14ZWxmNWRqZg==" target="_blank" style="color: var(--dourado-fosco); font-size: 1.2rem;">
+                    <i class="fab fa-instagram"></i> @grupo_.emanuel
+                </a>
+            </div>
+            
+            <p class="copyright">&copy; 2023 Grupo Emanuel - Todos os direitos reservados</p>
+        </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script>
+        // Efeito de digitação para o versículo
+        document.addEventListener('DOMContentLoaded', function() {
+            const versiculo = document.querySelector('.versiculo');
+            const textoOriginal = versiculo.textContent;
+            versiculo.textContent = '';
+            
+            let i = 0;
+            function digitar() {
+                if (i < textoOriginal.length) {
+                    versiculo.textContent += textoOriginal.charAt(i);
+                    i++;
+                    setTimeout(digitar, 50);
+                }
+            }
+            
+            // Inicia a animação após um breve delay
+            setTimeout(digitar, 1000);
+            
+            // Efeito para os cards de evento
+            const eventos = document.querySelectorAll('.evento');
+            eventos.forEach(evento => {
+                evento.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                
+                evento.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Atualização dinâmica do ano no copyright
+            const anoAtual = new Date().getFullYear();
+            document.querySelector('.copyright').textContent = `© ${anoAtual} Grupo Emanuel - Todos os direitos reservados`;
+        });
+    </script>
 </body>
 </html>
-
